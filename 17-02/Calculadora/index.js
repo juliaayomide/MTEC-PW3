@@ -10,16 +10,16 @@ function addNumber(value){
 function addOperator(operator) {
     if (currentInput === "" && operator !== "-") return; 
 
-    let lastChar = currentInput.slice(-1);
+    let srepeticao = currentInput.slice(-1);
 
    
-    if (["+", "x", "/", "."].includes(lastChar) && ["+", "x", "/", "."].includes(operator)) {
+    if (["+", "x", "/", "."].includes(srepeticao) && ["+", "x", "/", "."].includes(operator)) {
         alert("Não é permitido inserir dois operadores iguais consecutivamente");
         return;
     }
 
-  
-    if (lastChar === "-" && ["+", "x", "/"].includes(operator)) return;
+    // Permitir negativo após um operador (exemplo: 5 + -3)
+    if (srepeticao === "-" && ["+", "x", "/"].includes(operator)) return;
 
     currentInput += operator;
     tela.textContent = currentInput;

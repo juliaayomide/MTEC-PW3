@@ -44,17 +44,3 @@ function calculate(){
         currentInput = "";
     }
 }
-function mostrarNaTela(mostrar) {
-    const regexSinais = new RegExp(/[\+\-\*\/]$/);
-    const ultimoCaractereSinal = regexSinais.test(caixinha.value);
-    const valorDigitadoSinal = regexSinais.test(mostrar);    
-    
-    if (!ultimoCaractereSinal || !valorDigitadoSinal) {
-      if (caixinha.value == "*") {
-        caixinha.value = "";
-      }
-      caixinha.value += mostrar;
-      console.log(mostrar);
-      console.log(caixinha.value);
-    }
-}

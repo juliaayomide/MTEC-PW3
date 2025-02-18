@@ -18,7 +18,7 @@ function addOperator(operator) {
         return;
     }
 
-    // Permitir negativo após um operador (exemplo: 5 + -3)
+  
     if (lastChar === "-" && ["+", "x", "/"].includes(operator)) return;
 
     currentInput += operator;

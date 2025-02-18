@@ -7,19 +7,23 @@ function addNumber(value){
     tela.textContent = currentInput
 }
 
-function addOperator(operator){
-    if(currentInput === "" && operator !== ".") return;
-    
-    let srepeticao = currentInput.slice(-1);
-    if (["+", "-", "x", "/", "."].includes(srepeticao) && ["+", "-", "x", "/", "."].includes(operador)){
-        alert('Não é permitido inserir dois operadores consecutivos');
+function addOperator(operator) {
+    if (currentInput === "" && operator !== "-") return; 
+
+    let lastChar = currentInput.slice(-1);
+
+   
+    if (["+", "x", "/", "."].includes(lastChar) && ["+", "x", "/", "."].includes(operator)) {
+        alert("Não é permitido inserir dois operadores iguais consecutivamente");
         return;
-    } 
+    }
+
+    // Permitir negativo após um operador (exemplo: 5 + -3)
+    if (lastChar === "-" && ["+", "x", "/"].includes(operator)) return;
 
     currentInput += operator;
-    tela.textContent = currentInput
+    tela.textContent = currentInput;
 }
-
 function clean(){
     tela.textContent = ""
 }

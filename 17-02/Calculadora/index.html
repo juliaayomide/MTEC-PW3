@@ -6,12 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./midias/calculadora.png">
 </head>
 <body>
+    <video autoplay loop muted id="background-video">
+        <source src="https://www.freepik.com/free-video/chalkboard-math-class_1195994#fromView=search&page=1&position=5&uuid=4e01b161-486b-4c8e-b067-d79f45de21f1" type="video/mp4">
+        Seu navegador não suporta a tag de vídeo.
+      </video>      
     <div class="calculadora">
         <div class="tela" id="tela"></div>
             <div class="botoes">
-                <button class="button-gray" onclick="del()" >D</button>
+                <button class="button-gray" id="t" onclick="del()" ></button>
                 <button class="button-gray" onclick="clean()" >AC</button>
                 <button class="button-gray" onclick="addOperator('x')">X</button>
                 <button class="button-gray" onclick="addOperator('/')" >/</button>
@@ -32,6 +37,11 @@
             </div>
         </div>
     </div>
+</div>
+
+    <script src="index.js"></script>
+</body>
+</html>
 
     <script src="index.js"></script>
 </body>

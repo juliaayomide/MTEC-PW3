@@ -25,7 +25,8 @@ function addOperator(operator) {
     tela.textContent = currentInput;
 }
 function clean(){
-    tela.textContent = ""
+    currentInput= " ";
+    tela.textContent = " ";
 }
 
 function del(){
@@ -48,3 +49,4 @@ function calculate(){
         currentInput = "";
     }
 }
+
